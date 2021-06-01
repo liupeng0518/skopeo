@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: skopeo
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@test
+      - uses: actions/setup-node@test
       - name: static
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
